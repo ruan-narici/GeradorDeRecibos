@@ -21,12 +21,11 @@ const totalProdutoServico = document.querySelector("#totalProdutoServico");
 const valorTotal = document.querySelector("#valorTotal");
 const btnGerarRecibo = document.querySelector("#btnGerarRecibo");
 
-let asdqweqw = "adm";
 function gerarNumeroDoRecibo() {
     let data = new Date();
     numeroDoRecibo.value = `${data.getFullYear()}${data.getMonth() +1}${data.getDate()}${data.getHours()}${data.getMinutes()}${data.getSeconds()}${data.getMilliseconds()}`;
 }
-
+let bfsadfqaweqw = '';
 function alimentarCamposPagador() {
     nomeCompletoPagador.value = "Laboratório Vida";
     cpfCnpjPagador.value = "03.593.544/0001-00";
@@ -38,7 +37,7 @@ function mostrarValorTotal() {
         valorTotal.innerHTML = totalProdutoServico.value;
     })
 }
-let dqwr5fsdfgsd = "lab123#";
+let awerqwtgsd = '';
 function enviarDados() {
     btnGerarRecibo.addEventListener('click', () => {
         if(cpfCnpjPagador.value == '') {
@@ -67,25 +66,46 @@ function enviarDados() {
         localStorage.setItem("cpfCnpjBeneficiario", cpfCnpjBeneficiario.value);
     })
 }
-
+let dqwr5fsdfgsd = "ԐҌҘɌɘɤƤ";
 function entrar() {
     bthEntrar.addEventListener('click', () => {
         page1.classList.add("blur");
         pageLogin.classList.remove("hide");
     })
 }
+let asdqweqw = "ҌҰԜ";
+function criptografia() {
+    for (let i = 0; i < asdqweqw.length; i++) {
+        let captureChar = asdqweqw.charCodeAt(i)/12;
+        awerqwtgsd += String.fromCharCode(captureChar);
+    }
+    for (let i = 0; i < dqwr5fsdfgsd.length; i++) {
+        let captureChar = dqwr5fsdfgsd.charCodeAt(i)/12;
+        bfsadfqaweqw += String.fromCharCode(captureChar);
+    }
+}
+
+function clearCriptografia() {
+    asdqweqw = "ҌҰԜ";
+    dqwr5fsdfgsd = "ԐҌҘɌɘɤƤ";
+    awerqwtgsd = '';
+    bfsadfqaweqw = '';
+}
 
 function verificarCredenciais() {
     btnAutenticar.addEventListener('click', () => {
-        if (login.value == asdqweqw && password.value == dqwr5fsdfgsd) {
+        criptografia();
+        if (login.value == awerqwtgsd && password.value == bfsadfqaweqw) {
             page1.classList.remove("blur");
             page1.classList.add("hide");
             pageLogin.classList.add("hide");
             page2.classList.remove("hide");
             gerarNumeroDoRecibo();
             alimentarCamposPagador();
+            clearCriptografia();
         } else {
             alert("Usuário ou senha inválida!");
+            clearCriptografia();
         }
     })
 }

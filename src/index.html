@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de recibos</title>
+    <link rel="icon" href="../assets/img/recibo_1.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white">
+    <section class="flex mx-14 my-24 z-0 relative transition ease-in duration-300" id="page1">
+        <div class="w-1/2">
+            <h1 class="text-green-900 text-6xl font-bold">Bem-vindo a página de recibos</h1>
+            <p class="text-2xl text-slate-800 my-8">
+                Este site é uma plataforma online que permite criar recibos personalizados de forma fácil
+                e rápida. Ele ajuda a comprovar transações financeiras e oferece uma interface intuitiva. É útil para
+                empresas que precisam manter um controle preciso de suas
+                finanças. Em resumo, este site é uma solução prática e conveniente para quem precisa
+                comprovar transações financeiras.
+            </p>
+            <button id="btnEntrar"
+                class="border-4 rounded-xl border-green-900 py-5 px-20 text-3x l font-bold text-green-900 hover:bg-green-900 hover:text-white transition ease-in duration-300 drop-shadow-md hover:drop-shadow-xl">ENTRAR</button>
+        </div>
+        <div class="w-1/2 flex items-center justify-items-center justify-center">
+            <img src="../assets/img/img_1.svg" alt="">
+        </div>
+    </section>
+    <section class="flex flex-col items-center justify-center z-10 hide" id="pageLogin">
+        <div class="w-fit h-5/6 flex flex-col items-center justify-center fixed top-10">
+            <div class="bg-green-900 flex items-center justify-center w-fit rounded-full p-2 imgLogin z-20">
+                <img src="../assets/img/login_1.svg">
+            </div>
+            <div
+                class="flex flex-col items-center justify-center px-20 bg-white border-2 rounded-xl border-green-900 w-fit drop-shadow-xl md:filter-none">
+
+                <h1 class="text-4xl font-bold text-green-900 mt-20 mb-7">Login</h1>
+                <div class="flex flex-col">
+                    <div class="flex items-center relative">
+                        <img src="../assets/img/login_2.svg" class="absolute ml-3 select-none w-4">
+                        <input type="text" id="login" placeholder="Digite o seu usuário"
+                            class="bg-gray-200 text-gray-600 py-4 px-10 text-sm text-left border border-gray-400 rounded-md w-80 filter-none">
+                    </div>
+                    <div class="flex items-center relative">
+                        <img src="../assets/img/password_1.svg" class="absolute ml-3 select-none w-4">
+                        <input type="password" id="password" placeholder="Digite a sua senha"
+                            class="bg-gray-200 text-gray-600 py-4 px-10 text-sm text-left border border-gray-400 rounded-md w-80 my-6 filter-none">
+                    </div>
+
+                    <div class="flex justify-center">
+                        <button
+                            class="border-4 rounded-xl border-green-900 py-4 px-16 text-lg font-bold text-green-900 hover:bg-green-900 hover:text-white transition ease-in duration-300 drop-shadow-md hover:drop-shadow-xl w-fit mb-12 mt-5"
+                            id="btnAutenticar">ENTRAR</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hide" id="page2">
+        <header class="bg-green-900 rounded-b-3xl grid grid-cols-2 py-3">
+            <div class="flex items-center">
+                <img src="../assets/img/logo_1.svg" alt="Logo do Laboratório Vida" class="w-64 ml-5">
+            </div>
+            <div class="flex items-end justify-end">
+                <p class="text-white text-3xl font-medium mr-10 mb-1">Recibo de pagamento</p>
+            </div>
+        </header>
+        <div class="mx-11 my-7">
+            <h1 class="text-2xl font-bold text-green-900 mb-5">Preencha as informações para gerar o seu recibo</h1>
+            <form action="recibo.html" method="get" class="">
+                <p class="text-lg text-green-900 font-medium mb-2">Dados do recibo</p>
+                <div class="flex flex-row">
+                    <div class="flex flex-col mr-20">
+                        <label for="dataDoRecibo" class="text-green-900 mb-1">Data do recibo<span
+                                class="text-red-600">*</span></label>
+                        <input type="date" placeholder="dd/MM/yyyy" id="dataDoRecibo"
+                            class="bg-gray-200 text-gray-600 py-2 px-2 text-sm text-center border border-gray-400 rounded-md"
+                            required>
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="numeroDoRecibo" class="text-green-900 mb-1">Número do recibo</label>
+                        <input type="text" id="numeroDoRecibo" readonly="readonly"
+                            class="bg-gray-200 text-gray-600 py-2 px-2 text-sm text-center border border-gray-400 rounded-md">
+                    </div>
+                </div>
+                <p class="text-lg text-green-900 font-medium my-2">Dados do pagador</p>
+                <div class="flex flex-col">
+                    <label for="nomeCompletoPagador" class="text-green-900 my-1">Nome completo<span
+                            class="text-red-600">*</span></label>
+                    <input type="text" placeholder="Informe o nome do pagador" id="nomeCompletoPagador"
+                        class="bg-gray-200 text-gray-600 py-2 px-2 text-sm text-left border border-gray-400 rounded-md"
+                        required>
+                </div>
+                <div class="flex flex-row">
+                    <div class="flex flex-col mr-20">
+                        <label for="cpfCnpjPagador" class="text-green-900 my-1">CPF/CNPJ</label>
+                        <input type="text" placeholder="00000000000" id="cpfCnpjPagador"
+                            class="bg-gray-200 text-gray-600 py-2 px-2 text-sm text-center border border-gray-400 rounded-md">
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="numeroDoCelularPagador" class="text-green-900 my-1">Celular</label>
+                        <input type="text" placeholder="(DDD) 00000-0000" id="numeroDoCelularPagador"
+                            class="bg-gray-200 text-gray-600 py-2 px-2 text-sm text-center border border-gray-400 rounded-md">
+                    </div>
+                </div>
+                <p class="text-lg text-green-900 font-medium my-2">Dados do beneficiário</p>
+                <div class="flex flex-col">
+                    <label for="nomeCompletoBeneficiario" class="text-green-900 my-1">Nome completo<span
+                            class="text-red-600">*</span></label>
+                    <input type="text" placeholder="Informe o nome do pagador" id="nomeCompletoBeneficiario"
+                        class="bg-gray-200 text-gray-600 py-2 px-2 text-sm text-left border border-gray-400 rounded-md"
+                        required>
+                </div>
+                <div class="flex flex-row">
+                    <div class="flex flex-col mr-20">
+                        <label for="cpfCnpjBeneficiario" class="text-green-900 my-1">CPF/CNPJ</label>
+                        <input type="text" placeholder="00000000000" id="cpfCnpjBeneficiario"
+                            class="bg-gray-200 text-gray-600 py-2 px-2 text-sm text-center border border-gray-400 rounded-md">
+                    </div>
+                    <div class="flex flex-col mr-20">
+                        <label for="estadoBeneficiario" class="text-green-900 my-1">Estado</label>
+                        <input type="text" placeholder="Informe o estado" id="estadoBeneficiario"
+                            class="bg-gray-200 text-gray-600 py-2 px-2 text-sm text-center border border-gray-400 rounded-md">
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="cidadeBeneficiario" class="text-green-900 my-1">Cidade</label>
+                        <input type="text" placeholder="Informe a cidade" id="cidadeBeneficiario"
+                            class="bg-gray-200 text-gray-600 py-2 px-2 text-sm text-center border border-gray-400 rounded-md">
+                    </div>
+                </div>
+                <p class="text-lg text-green-900 font-medium my-2">Produto/Serviço</p>
+                <div class="flex flex-row">
+                    <div class="flex flex-col mr-20">
+                        <label for="descricaoProdutoServico" class="text-green-900 my-1">Descrição<span
+                                class="text-red-600">*</span></label>
+                        <input type="text" id="descricaoProdutoServico"
+                            class="bg-gray-200 text-gray-600 py-2 px-2 text-sm text-left border border-gray-400 rounded-md w-96"
+                            required>
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="totalProdutoServico" class="text-green-900 my-1">Total<span
+                                class="text-red-600">*</span></label>
+                        <input type="number" step=".01" id="totalProdutoServico" placeholder="R$0,00"
+                            class="bg-gray-200 text-gray-600 py-2 px-2 text-sm text-center border border-gray-400 rounded-md"
+                            required>
+                    </div>
+                </div>
+                <p class="text-lg text-green-900 font-medium  block text-right">Valor total: R$<span id="valorTotal"
+                        class="text-slate-500">0,00</span></p>
+
+                <div class="flex justify-center">
+                    <button type="submit" id="btnGerarRecibo"
+                        class="bg-green-900 text-white text-xl font-bold py-3 px-5 rounded-xl my-16 drop-shadow-lg hover:bg-green-700 transition ease-in duration-300">GERAR
+                        RECIBO</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer class="fixed bottom-0 bg-green-900 text-white w-full text-center pb-1 pt-1">
+        <div class="grid grid-cols-2 gap-1 justify-items-center">
+            <a href="https://www.linkedin.com/in/cinthia-oliveira-silva/" target="_blank"
+                class="hover:text-slate-300 w-fit">UI/UX Designer desenvolvido por Cínthia Oliveira</a>
+            <a href="https://www.linkedin.com/in/ruan-narici/" target="_blank" class="hover:text-slate-300 w-fit">Site
+                desenvolvido por Ruan Narici</a>
+        </div>
+    </footer>
+    <style>
+        .hide {
+            display: none;
+        }
+
+        .imgLogin {
+            margin-bottom: -50px;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

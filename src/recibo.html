@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Recibo</title>
+    <link rel="icon" href="../assets/img/recibo_1.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- 1 Via -->
+    <div class="border-b-2 border-dashed border-gray-400">
+        <div class="grid grid-cols-2 px-2 py-7 border-b-2 border-green-600">
+            <img src="../assets/img/logo_2.svg" alt="Logo do Laboratório Vida">
+            <h1 class="text-sm font-medium flex justify-center items-center">Laboratório Vida</h1>
+        </div>
+        <div class="border-b-2 border-green-600 py-7 px-6 flex items-center">
+            <p class="text-base font-bold w-2/6 mr-20">RECIBO</p>
+            <label for="numeroReciboGerado" class="text-base font-bold mr-3">Nº</label>
+            <input type="text" readonly="readonly" id="numeroReciboGerado"
+                class="bg-gray-200 text-gray-600 py-2 px-2 text-sm text-center border border-gray-400 rounded-md mr-20">
+            <label for="valorReciboGerado" class="text-base font-bold mr-3">VALOR</label>
+            <input type="text" readonly="readonly" id="valorReciboGerado"
+                class="bg-gray-200 text-gray-600 py-2 px-2 text-sm text-center border border-gray-400 rounded-md">
+        </div>
+        <div class="py-7 px-6">
+            <p class="break-all text-sm font-medium">
+            Recebi(emos) de
+            <span id="receboDe" class="font-normal uppercase after:block">Laboratório Vida</span>
+            Correspondente a
+            <span id="correspondeA" class="font-normal uppercase">Limpeza do laboratório</span>
+            e para clareza firmo(amos) o presente.
+            </p>
+            <p id="cidadeEstadoData" class="text-right mt-8">Vitória da Conquista - Bahia, 26 de Abril de 2023.</p>
+            <div class="flex my-8">
+                <div class="mr-4">
+                    <p class="text-sm font-medium">Assinatura do pagador  __________________________________________</p>
+                    <p class="text-sm font-medium">Assinatura do beneficiário  __________________________________________</p>
+                </div>
+                <div>
+                    <p class="text-sm font-medium">CPF/CNPJ <span id="cpfCnpjPagadorGerado" class="font-normal">000.000.000-00</span></p>
+                    <p class="text-sm font-medium">CPF/CNPJ <span id="cpfCnpjBeneficiarioGerado" class="font-normal">000.000.000-00</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2 Via -->
+    <div>
+        <div class="grid grid-cols-2 px-2 py-7 border-b-2 border-green-600">
+            <img src="../assets/img/logo_2.svg" alt="Logo do Laboratório Vida">
+            <h1 class="text-sm font-medium flex justify-center items-center">Laboratório Vida</h1>
+        </div>
+        <div class="border-b-2 border-green-600 py-7 px-6 flex items-center">
+            <p class="text-base font-bold w-2/6 mr-20">RECIBO</p>
+            <label for="numeroReciboGerado" class="text-base font-bold mr-3">Nº</label>
+            <input type="text" readonly="readonly" id="numeroReciboGerado"
+                class="bg-gray-200 text-gray-600 py-2 px-2 text-sm text-center border border-gray-400 rounded-md mr-20">
+            <label for="valorReciboGerado" class="text-base font-bold mr-3">VALOR</label>
+            <input type="text" readonly="readonly" id="valorReciboGerado"
+                class="bg-gray-200 text-gray-600 py-2 px-2 text-sm text-center border border-gray-400 rounded-md">
+        </div>
+        <div class="py-7 px-6">
+            <p class="break-all text-sm font-medium">
+            Recebi(emos) de
+            <span id="receboDe" class="font-normal uppercase after:block">Laboratório Vida</span>
+            Correspondente a
+            <span id="correspondeA" class="font-normal uppercase">Limpeza do laboratório</span>
+            e para clareza firmo(amos) o presente.
+            </p>
+            <p id="cidadeEstadoData" class="text-right mt-8">Vitória da Conquista - Bahia, 26 de Abril de 2023.</p>
+            <div class="flex my-8">
+                <div class="mr-4">
+                    <p class="text-sm font-medium">Assinatura do pagador  __________________________________________</p>
+                    <p class="text-sm font-medium">Assinatura do beneficiário  __________________________________________</p>
+                </div>
+                <div>
+                    <p class="text-sm font-medium">CPF/CNPJ <span id="cpfCnpjPagadorGerado" class="font-normal">000.000.000-00</span></p>
+                    <p class="text-sm font-medium">CPF/CNPJ <span id="cpfCnpjBeneficiarioGerado" class="font-normal">000.000.000-00</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/recibo.js"></script>
+</body>
+
+</html>

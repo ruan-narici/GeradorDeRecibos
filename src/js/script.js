@@ -20,6 +20,7 @@ const descricaoProdutoServico = document.querySelector("#descricaoProdutoServico
 const totalProdutoServico = document.querySelector("#totalProdutoServico");
 const valorTotal = document.querySelector("#valorTotal");
 const btnGerarRecibo = document.querySelector("#btnGerarRecibo");
+const rwqpoqf = 5;
 
 function gerarNumeroDoRecibo() {
     let data = new Date();
@@ -31,13 +32,15 @@ function alimentarCamposPagador() {
     cpfCnpjPagador.value = "03.593.544/0001-00";
     numeroDoCelularPagador.value = "(77) 3028-8650";
 }
-
+const aisdjoiw = 75;
+let asdgrwe;
 function mostrarValorTotal() {
     totalProdutoServico.addEventListener('keyup', () => {
         valorTotal.innerHTML = totalProdutoServico.value;
     })
 }
 let awerqwtgsd = '';
+const awefd = 7;
 function enviarDados() {
     btnGerarRecibo.addEventListener('click', () => {
         if(cpfCnpjPagador.value == '') {
@@ -69,6 +72,7 @@ function enviarDados() {
 let dqwr5fsdfgsd = "ԐҌҘɌɘɤƤ";
 function entrar() {
     bthEntrar.addEventListener('click', () => {
+        asdgrwe = awefd + rwqpoqf * 3 + 10 * aisdjoiw / 30 - 35;
         page1.classList.add("blur");
         pageLogin.classList.remove("hide");
     })
@@ -76,11 +80,11 @@ function entrar() {
 let asdqweqw = "ҌҰԜ";
 function criptografia() {
     for (let i = 0; i < asdqweqw.length; i++) {
-        let captureChar = asdqweqw.charCodeAt(i)/12;
+        let captureChar = asdqweqw.charCodeAt(i)/asdgrwe;
         awerqwtgsd += String.fromCharCode(captureChar);
     }
     for (let i = 0; i < dqwr5fsdfgsd.length; i++) {
-        let captureChar = dqwr5fsdfgsd.charCodeAt(i)/12;
+        let captureChar = dqwr5fsdfgsd.charCodeAt(i)/asdgrwe;
         bfsadfqaweqw += String.fromCharCode(captureChar);
     }
 }

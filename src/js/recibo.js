@@ -1,3 +1,4 @@
+const btnImprimir = document.querySelector("#btnImprimir");
 const numeroReciboGerado = document.querySelectorAll("#numeroReciboGerado");
 const valorReciboGerado = document.querySelectorAll("#valorReciboGerado");
 const receboDe = document.querySelectorAll("#receboDe");
@@ -32,4 +33,11 @@ function capturarDadosEAlimentarRecibo() {
     localStorage.clear();
 }
 
+function imprimir() {
+    btnImprimir.addEventListener('click', () => {
+        print();
+    });
+}
+
 capturarDadosEAlimentarRecibo();
+imprimir();

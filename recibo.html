@@ -11,6 +11,9 @@
 </head>
 
 <body>
+    <header class="flex items-center justify-center py-2 elemento">
+        <button id="btnImprimir" class="bg-green-900 text-white text-xl font-bold py-3 px-5 rounded-xl drop-shadow-lg hover:bg-green-700 transition ease-in duration-300">IMPRIMIR</button>
+    </header>
     <!-- 1 Via -->
     <div class="border-b-2 border-dashed border-gray-400">
         <div class="grid grid-cols-2 px-2 py-7 border-b-2 border-green-600">
@@ -84,6 +87,13 @@
             </div>
         </div>
     </div>
+    <style>
+        @media print {
+            .elemento{
+                display: none;
+            }
+        }  
+    </style>
     <script src="src/js/recibo.js"></script>
 </body>
 
